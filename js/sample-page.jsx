@@ -140,7 +140,7 @@ export default (props) => {
         <HorizontalSplit padding="md">
           <div>
             <p className="lead">Batteries Included</p>
-            <p>Neal is based on <a href="http://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap 4</a> and ships with navbar, hero, footer, sections, horziontal split, pricing tables, customer quotes other other components you need for a landing page. No more repetetive coding! Oh, and it's easy to extend.</p>
+            <p>Neal is based on <a href="http://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap 4</a> and ships with navbar, hero, footer, sections, horizontal split, pricing tables, customer quotes other components you need for a landing page. No more repetetive coding! Oh, and it's easy to extend.</p>
           </div>
           <div>
             <p className="lead">Third-Party Integrations</p>
