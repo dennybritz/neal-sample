@@ -22,8 +22,3 @@ docker run -p 3000:80 -v "$PWD"/public:/usr/local/apache2/htdocs/ httpd:2.4
 ```
 
 Visit `http://<YOUR_DOCKER_MACHINE_IP>:3000`
-
-
-## Deploying to AWS
-
-Simply copy the `public/` directory to an AWS S3 bucket and enable [Static Website Hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
