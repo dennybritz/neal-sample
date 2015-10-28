@@ -1,22 +1,29 @@
-Sample page for neal-react.
+# Neal-React Sample Page
+
+This is a sample page for [neal-react](http://www.github.com/dennybritz/neal-react), reactjs components for building landing pages.
 
 
-# Open locally
+## Develop locally
 
-
-# Run with Docker
+Build a minified Javacript version:
 
 ```bash
-docker run -p 3000:80 -it --rm -v "$PWD"/public:/usr/local/apache2/htdocs/ httpd:2.4
+git clone git@github.com:dennybritz/neal-sample.git
+cd neal-sample
+npm install
+npm run watch
 ```
 
-# Develop
+Run inside a webserver with docker:
+
+```
+cd neal-sample
+docker run -p 3000:80 -v "$PWD"/public:/usr/local/apache2/htdocs/ httpd:2.4
+```
+
+Visit `http://<YOUR_DOCKER_MACHINE_IP>:3000`
 
 
-# TODO
+## Deploying to AWS
 
-- Doc: Add: How to deploy to AWS
-- Doc: Write README
-- Doc: Update Sample Page: Overview, code example, AWS, etc
-
-
+Simply copy the `public/` directory to an AWS S3 bucket and enable [Static Website Hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).

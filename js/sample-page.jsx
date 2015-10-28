@@ -21,7 +21,6 @@ import {
 let brandName = "SamplePage";
 let brand = <span>{brandName}</span>;
 
-// Function to call when someone signs up
 let onSignup = ({ name: name, email: email, password: password }) => Stripe.StripeHandler.open({
   name: "Stripe Integration Included",
   description: "Like this? Donate $5 <3",
@@ -205,7 +204,7 @@ export default (props) => {
       </Section>
 
       <Footer brandName={brandName} facebookUrl="http://www.facebook.com" twitterUrl="http://www.twitter.com"
-        emailUrl="mailto:info@google.com" address={businessAddress}>
+        emailUrl="mailto:info@gmail.com" address={businessAddress}>
       </Footer>
     </Page>
   );

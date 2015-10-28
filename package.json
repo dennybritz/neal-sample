@@ -4,6 +4,7 @@
   "description": "A sample page built with neal-react",
   "main": "js/app.js",
   "scripts": {
+    "watch": "node node_modules/webpack/bin/webpack.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/.bin/eslint --ext js,jsx ."
   },

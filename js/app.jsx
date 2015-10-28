@@ -14,7 +14,11 @@ if (window.location.protocol === "file:") {
 class SampleApp extends React.Component {
   render() {
     return (
-      <App googleAnalyticsKey="ABC" segmentKey="ABC" stripeKey="pk_test_6pRNASCoBOKtIshFeQd4XMUh" history={history}>
+      <App
+        googleAnalyticsKey="ABC"
+        segmentKey="ABC"
+        stripeKey="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+        history={history}>
         {this.props.children}
       </App>
     );
