@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-S3_BUCKET=s3://neal-react-sample
+S3_BUCKET=s3://www.nealjs.com
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../" && pwd)"
 cd $BASE_DIR
 
