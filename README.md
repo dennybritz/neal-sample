@@ -1,4 +1,4 @@
-# Neal-React Sample Page
+# neal-React Sample Page
 
 This is a sample page for [neal-react](http://www.github.com/dennybritz/neal-react), reactjs components for building landing pages.
 

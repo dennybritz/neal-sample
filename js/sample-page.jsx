@@ -203,8 +203,11 @@ export default (props) => {
         </Team>
       </Section>
 
-      <Footer brandName={brandName} facebookUrl="http://www.facebook.com" twitterUrl="http://www.twitter.com"
-        emailUrl="mailto:info@gmail.com" address={businessAddress}>
+      <Footer brandName={brandName}
+        facebookUrl="http://www.facebook.com"
+        twitterUrl="http://www.twitter.com/dennybritz"
+        githubUrl="https://github.com/dennybritz/neal-react"
+        address={businessAddress}>
       </Footer>
     </Page>
   );
