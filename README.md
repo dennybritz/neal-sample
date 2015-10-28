@@ -5,7 +5,7 @@ This is a sample page for [neal-react](http://www.github.com/dennybritz/neal-rea
 
 ## Develop locally
 
-Build a minified Javacript version:
+Transpile the Javascript using Babel and watch for changes:
 
 ```bash
 git clone git@github.com:dennybritz/neal-sample.git
@@ -14,10 +14,9 @@ npm install
 npm run watch
 ```
 
-Run inside a webserver with docker:
+Then, Run inside a webserver with docker:
 
 ```
-cd neal-sample
 docker run -p 3000:80 -v "$PWD"/public:/usr/local/apache2/htdocs/ httpd:2.4
 ```
 
