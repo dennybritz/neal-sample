@@ -15,9 +15,9 @@ class SampleApp extends React.Component {
   render() {
     return (
       <App
-        googleAnalyticsKey="ABC"
-        segmentKey="ABC"
-        stripeKey="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+        googleAnalyticsKey="UA-42490151-3"
+        segmentKey=""
+        stripeKey="pk_BkaOyHcEiCFaUiEADe7UH6Wq7D6f7"
         history={history}>
         {this.props.children}
       </App>
