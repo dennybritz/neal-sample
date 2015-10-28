@@ -33,7 +33,7 @@ let onSignup = ({ name: name, email: email, password: password }) => Stripe.Stri
 let businessAddress = (
   <address>
     <strong>{brandName}</strong><br/>
-    1355 Market Street, Suite 900<br/>
+    1337 Market Street, Suite 1337<br/>
     San Francisco, CA 94103<br/>
     +1 (123) 456-7890
   </address>
@@ -41,14 +41,15 @@ let businessAddress = (
 
 let pricingPlan1 = {
   name: "Personal",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "Describe your plans with easy-to-use pricing tables. Each plan provies callbacks to handle visitor clicks.",
   price: "$99",
   features: {
-    "Fully Integrated E-Commerce": true,
-    "Sell 1 Product & Accept Donations": true,
-    "Mobile Website and Store": false,
-    "Custom Domain": false,
-    "24/7 Customer Support": false
+    "Describe pricing plans as JSON": true,
+    "Features can be activate/inactive": true,
+    "Works on mobile": true,
+    "Custom callbacks": true,
+    "Extrea Feature 1": false,
+    "Extrea Feature 2": false
   },
   onClick: onSignup
 };
@@ -57,7 +58,7 @@ let pricingPlan2 = Object.assign({}, pricingPlan1, {
   price: "$499",
   name: "Startup",
   features: Object.assign({}, pricingPlan1.features, {
-    "Mobile Website and Store": true
+    "Extrea Feature 1": true
   })
 });
 
@@ -65,20 +66,19 @@ let pricingPlan3 = Object.assign({}, pricingPlan2, {
   price: "$999",
   name: "Enterprise",
   features: Object.assign({}, pricingPlan2.features, {
-    "Custom Domain": true,
-    "24/7 Customer Support": true
+    "Extrea Feature 2": true
   })
 });
 
 let sampleCode = `<Page>
-  <Hero heading="Declarative Landing Pages for React.js"></Hero>
+  <Hero><h1>{ /* Content */ }</h1></Hero>
   <Section heading="Hello!">
-    <HorizontalSplit padding="md"> { /* Content */} </HorizontalSplit>
+    <HorizontalSplit padding="md"> { /* Content */ } </HorizontalSplit>
   </Section>
   <Section>
     <Team>
-      <TeamMember name="Link" title="Co-founder" imageUrl="img/link.jpg"> { /* Description */} </TeamMember>
-      <TeamMember name="Yoshi" title="Co-founder" imageUrl="img/yoshi.jpg"> { /* Description */} </TeamMember>
+      <TeamMember name="Link" title="Co-founder" imageUrl="img/link.jpg"> { /* Description */ } </TeamMember>
+      <TeamMember name="Yoshi" title="Co-founder" imageUrl="img/yoshi.jpg"> { /* Description */ } </TeamMember>
     </Team>
   </Section>
   <Section>
@@ -100,14 +100,16 @@ export default (props) => {
       <Navbar brand={brand}>
         <NavItem><Link to="Home" className="nav-link">Home</Link></NavItem>
         <NavItem dropdown={true}>
-          <DropdownToggle>Dropdown</DropdownToggle>
+          <DropdownToggle>Github</DropdownToggle>
           <DropdownMenu>
-            <Link to="Home" className="dropdown-item">Action</Link>
-            <Link to="Home" className="dropdown-item">Another action</Link>
+            <a href="https://github.com/dennybritz/neal-react" className="dropdown-item" target="_blank">
+              Neal React
+            </a>
+            <a href="https://github.com/dennybritz/neal-sample" className="dropdown-item" target="_blank">
+              Sample Page
+            </a>
           </DropdownMenu>
         </NavItem>
-        <NavItem><a href="https://github.com/dennybritz/" className="nav-link" target="_blank">Github</a></NavItem>
-        <NavItem><Link to="Home" className="nav-link">Documentation</Link></NavItem>
       </Navbar>
 
       <Hero backgroundImage="img/hero-bg-01.jpg"
@@ -116,9 +118,9 @@ export default (props) => {
         <p className="lead">Build a beautiful landing page in less than an hour.
           No more redundant code. Easily extensible.</p>
         <p>
-          <a className="btn btn-white">Learn More</a>
-          &nbsp;
-          <a className="btn btn-white">Get it on Github</a>
+          <a href="https://github.com/dennybritz/neal-react" target="_blank" className="btn btn-white">
+            Get it on Github
+          </a>
         </p>
       </Hero>
 
@@ -139,15 +141,15 @@ export default (props) => {
         <HorizontalSplit padding="md">
           <div>
             <p className="lead">Batteries Included</p>
-            <p>Neal ships with a navbar, hero unit, footer, sections, horziontal split, pricing tables, customer quotes other other basic components you need for a landing page. No more repetetive coding! Oh, and it's easy to extend.</p>
+            <p>Neal is based on <a href="http://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap 4</a> and ships with navbar, hero, footer, sections, horziontal split, pricing tables, customer quotes other other components you need for a landing page. No more repetetive coding! Oh, and it's easy to extend.</p>
           </div>
           <div>
             <p className="lead">Third-Party Integrations</p>
-            <p>Neal includes integration components for&nbsp;
+            <p>External integrations like &nbsp;
               <a href="http://www.google.com/analytics/">Google Analytics</a>,&nbsp;
               <a href="https://segment.com/">Segment</a>,&nbsp;
               <a href="https://stripe.com/">Stripe</a> and&nbsp;
-              <a href="http://typeform.com">Typeform</a>.
+              <a href="http://typeform.com">Typeform</a> are included.
               No more copying & pasting integration code, all you need is your API keys. We automatically track events when visitors navigate to different parts of your page.</p>
           </div>
           <div>
@@ -158,7 +160,7 @@ export default (props) => {
       </Section>
 
       <Section heading="Inline and Modal Signup components" className="gray">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>Use these components to capture user data, display a payment dialog and/or and send them to your own backend for handling. Of course, you could also just use a Typeform to collect user emails. </p>
         <SignupInline onSubmit={onSignup}/>
         <SignupModal modalId="signup-modal" onSubmit={onSignup}/>
         <p>
@@ -190,13 +192,13 @@ export default (props) => {
 
       <Section>
         <Team>
-          <TeamMember name="Denny Britz" title="Co-founder" imageUrl="img/people/paulgraham.jpg">
+          <TeamMember name="Member 1" title="Co-founder" imageUrl="img/people/grumpycat.jpg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </TeamMember>
-          <TeamMember name="Denny Britz" title="Co-founder" imageUrl="img/people/elonmusk.jpg">
+          <TeamMember name="Member 2" title="Co-founder" imageUrl="img/people/boo.jpg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </TeamMember>
-          <TeamMember name="Denny Britz" title="Co-founder" imageUrl="img/people/reidhoffman.jpg">
+          <TeamMember name="Member 3" title="Co-founder" imageUrl="img/people/panda.jpg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </TeamMember>
         </Team>
