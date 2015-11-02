@@ -15,21 +15,21 @@ import {
   SignupInline, SignupModal,
   Stripe,
   Team,
-  TeamMember
+  TeamMember,
 } from "neal-react";
 
-let brandName = "SamplePage";
-let brand = <span>{brandName}</span>;
+const brandName = "SamplePage";
+const brand = <span>{brandName}</span>;
 
-let onSignup = ({ name: name, email: email, password: password }) => Stripe.StripeHandler.open({
+const onSignup = ({ name: name, email: email, password: password }) => Stripe.StripeHandler.open({
   name: "Stripe Integration Included",
   description: "Like this? Donate $5 <3",
   panelLabel: "Donate {{amount}}",
   email: email,
-  amount: 500
+  amount: 500,
 });
 
-let businessAddress = (
+const businessAddress = (
   <address>
     <strong>{brandName}</strong><br/>
     1337 Market Street, Suite 1337<br/>
@@ -38,7 +38,7 @@ let businessAddress = (
   </address>
 );
 
-let pricingPlan1 = {
+const pricingPlan1 = {
   name: "Personal",
   description: "Describe your plans with easy-to-use pricing tables. Each plan provies callbacks to handle visitor clicks.",
   price: "$99",
@@ -48,28 +48,28 @@ let pricingPlan1 = {
     "Works on mobile": true,
     "Custom callbacks": true,
     "Extrea Feature 1": false,
-    "Extrea Feature 2": false
+    "Extrea Feature 2": false,
   },
-  onClick: onSignup
+  onClick: onSignup,
 };
 
-let pricingPlan2 = Object.assign({}, pricingPlan1, {
+const pricingPlan2 = Object.assign({}, pricingPlan1, {
   price: "$499",
   name: "Startup",
   features: Object.assign({}, pricingPlan1.features, {
-    "Extrea Feature 1": true
-  })
+    "Extrea Feature 1": true,
+  }),
 });
 
-let pricingPlan3 = Object.assign({}, pricingPlan2, {
+const pricingPlan3 = Object.assign({}, pricingPlan2, {
   price: "$999",
   name: "Enterprise",
   features: Object.assign({}, pricingPlan2.features, {
-    "Extrea Feature 2": true
-  })
+    "Extrea Feature 2": true,
+  }),
 });
 
-let sampleCode = `<Page>
+const sampleCode = `<Page>
   <Hero><h1>{ /* Content */ }</h1></Hero>
   <Section heading="Hello!">
     <HorizontalSplit padding="md"> { /* Content */ } </HorizontalSplit>
@@ -93,7 +93,7 @@ let sampleCode = `<Page>
 
 
 export default (props) => {
-  return(
+  return (
     <Page>
 
       <Navbar brand={brand}>
@@ -130,7 +130,7 @@ export default (props) => {
           <ImageListItem src="img/press/theverge-logo.png" url="http://www.theverge.com/"/>
           <ImageListItem src="img/press/techcrunch-logo.jpg" url="http://techcrunch.com/"/>
         </ImageList>
-      </Section>      
+      </Section>
 
       <Section className="nopad-bottom">
         <Code lang="jsx" block>{sampleCode}</Code>
