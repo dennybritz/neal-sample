@@ -8,7 +8,7 @@ This is a sample page for [neal-react](http://www.github.com/dennybritz/neal-rea
 Transpile the Javascript using Babel and watch for changes:
 
 ```bash
-git clone git@github.com:dennybritz/neal-sample.git
+git clone https://github.com/dennybritz/neal-sample.git
 cd neal-sample
 npm install
 npm run watch
