@@ -12,9 +12,13 @@ git clone https://github.com/dennybritz/neal-sample.git
 cd neal-sample
 npm install
 npm run watch
+npm run serve
 ```
 
-Then, Run inside a webserver with docker:
+Then open http://localhost:8080
+
+
+Or You can run inside a webserver with docker:
 
 ```
 docker run -p 3000:80 -v "$PWD"/public:/usr/local/apache2/htdocs/ httpd:2.4
