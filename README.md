@@ -16,3 +16,12 @@ npm run serve
 ```
 
 Then open http://localhost:8080
+
+
+Or You can run inside a webserver with docker:
+
+```bash
+docker run -p 3000:80 -v "$PWD"/public:/usr/local/apache2/htdocs/ httpd:2.4
+```
+
+Then visit http://<YOUR_DOCKER_MACHINE_IP>:3000
