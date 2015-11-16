@@ -57,7 +57,7 @@ const pricingPlan2 = Object.assign({}, pricingPlan1, {
   price: "$499",
   name: "Startup",
   features: Object.assign({}, pricingPlan1.features, {
-    "Extrea Feature 1": true,
+    "Extra Feature 1": true,
   }),
 });
 
@@ -65,7 +65,7 @@ const pricingPlan3 = Object.assign({}, pricingPlan2, {
   price: "$999",
   name: "Enterprise",
   features: Object.assign({}, pricingPlan2.features, {
-    "Extrea Feature 2": true,
+    "Extra Feature 2": true,
   }),
 });
 
