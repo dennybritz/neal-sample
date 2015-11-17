@@ -40,15 +40,15 @@ const businessAddress = (
 
 const pricingPlan1 = {
   name: "Personal",
-  description: "Describe your plans with easy-to-use pricing tables. Each plan provies callbacks to handle visitor clicks.",
+  description: "Describe your plans with easy-to-use pricing tables. Each plan provides callbacks to handle visitor clicks.",
   price: "$99",
   features: {
     "Describe pricing plans as JSON": true,
-    "Features can be activate/inactive": true,
+    "Features can be active/inactive": true,
     "Works on mobile": true,
     "Custom callbacks": true,
-    "Extrea Feature 1": false,
-    "Extrea Feature 2": false,
+    "Extra Feature 1": false,
+    "Extra Feature 2": false,
   },
   onClick: onSignup,
 };
@@ -57,7 +57,7 @@ const pricingPlan2 = Object.assign({}, pricingPlan1, {
   price: "$499",
   name: "Startup",
   features: Object.assign({}, pricingPlan1.features, {
-    "Extrea Feature 1": true,
+    "Extra Feature 1": true,
   }),
 });
 
@@ -65,7 +65,7 @@ const pricingPlan3 = Object.assign({}, pricingPlan2, {
   price: "$999",
   name: "Enterprise",
   features: Object.assign({}, pricingPlan2.features, {
-    "Extrea Feature 2": true,
+    "Extra Feature 2": true,
   }),
 });
 
@@ -159,7 +159,7 @@ export default (props) => {
       </Section>
 
       <Section heading="Inline and Modal Signup components" className="gray">
-        <p>Use these components to capture user data, display a payment dialog and/or and send them to your own backend for handling. Of course, you could also just use a Typeform to collect user emails. </p>
+        <p>Use these components to capture user data, display a payment dialog and/or send them to your own backend for handling. Of course, you could also just use a Typeform to collect user emails. </p>
         <SignupInline onSubmit={onSignup}/>
         <SignupModal modalId="signup-modal" onSubmit={onSignup}/>
         <p>
