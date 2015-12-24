@@ -6,8 +6,8 @@
   "main": "js/app.js",
   "scripts": {
     "watch": "webpack --watch",
+    "serve": "webpack-dev-server --content-base public/ --history-api-fallback",
     "build": "webpack -p",
-    "serve": "webpack-dev-server --content-base public/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext js,jsx ."
   },
@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "history": "^1.12.4",
-    "neal-react": "^0.2.1",
+    "neal-react": "^0.2.2",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-router": "^1.0.0-rc3"
