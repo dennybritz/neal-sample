@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "history": "^1.12.4",
-    "neal-react": "^0.2.2",
+    "neal-react": "^0.2.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-router": "^1.0.0-rc3"
