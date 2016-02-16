@@ -10,10 +10,7 @@ module.exports = {
       {
         test: /\.jsx?|\.js$/,
         exclude: /(node_modules|bower_components|neal-react)/,
-        loader: "babel",
-        query: {
-          optional: ["es7.classProperties"]
-        }
+        loader: "babel-loader",
       },
       {
         test: /\.scss$/,
